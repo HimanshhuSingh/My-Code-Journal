@@ -26,8 +26,8 @@ const Counter = () => {
 
   return (
     <>
-    <div>Counter: Use of use state</div>
-    <div>Combined state use kar rahe hain. Single state object to manage multiple operations.</div>
+    <h2>COUNTER:</h2>
+    <div>Single/combined state object to manage multiple operations</div>
     <p>You clicked the + button {data.increment} times.</p>
     <p>You clicked the - button {data.decrement} times.</p>
     <button onClick={handleMinusClick}>-</button>

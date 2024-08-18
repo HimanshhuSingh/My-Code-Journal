@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-
+import fieldContainer from './styles.css';
 
 
 const Form = () => {
@@ -11,7 +11,6 @@ const Form = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log('Form Submitted:', formData);
   };
 
   const handleChange = (e) => {
@@ -25,20 +24,24 @@ const Form = () => {
 
   return (
     <>
-    <div>Use of useState in form</div>
+    <h2>FORM:</h2>
     <form onSubmit={handleSubmit}>
       <div>
-        <div>
-        <label>Name:</label>
+        <div className="field-container">
+        <label>Name </label>
         <input type="text" name="name" value={formData.name} onChange={handleChange}  />
         </div>
-        <div><label>email:</label>
-        <input type="email" name="email" value={formData.email} onChange={handleChange}  /></div>
-        <div>
-        <label>Password:</label>
+
+        <div className="field-container">
+        <label>email </label>
+        <input type="email" name="email" value={formData.email} onChange={handleChange}  />
+        </div>
+
+        <div className="field-container">
+        <label>Password </label>
         <input type="password" name="password" value={formData.password} onChange={handleChange}  />
         </div>
-        
+
         <button type="submit">Submit</button>
       </div>
     </form>
