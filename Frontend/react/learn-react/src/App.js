@@ -8,6 +8,7 @@ function App() {
     <div className="App">
       <header className="App-header">
         <Counter />
+        <Form />
       </header>
     </div>
   );
