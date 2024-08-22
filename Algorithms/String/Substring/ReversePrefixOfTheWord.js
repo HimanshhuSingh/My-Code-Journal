@@ -18,3 +18,24 @@ var reversePrefix = function(word, ch) {
     }
     return word;
 };
+
+
+
+
+
+//Using inbuilt methods
+var reversePrefix = function(word, ch) {
+    let indOfChar = null;
+    for(let i=0;i<word.length;i++){
+        if(word[i] === ch){
+            indOfChar = i;
+            break;
+        }
+    }
+    if(indOfChar){
+        let firstPart = word.substring(0,indOfChar+1).split("").reverse().join('');
+        let secondPart = word.substring(indOfChar+1);
+        return firstPart+secondPart;
+    }
+    return word;
+};
